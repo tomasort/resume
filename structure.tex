@@ -1,0 +1,105 @@
+
+\geometry{
+  letterpaper,
+  left = 0.5in,
+  right = 0.5in,
+  top = 0.6in,
+  bottom = 0.6in
+}
+
+\hypersetup{
+  colorlinks = true, 
+  linkcolor = blue, 
+  urlcolor  = blue,
+  citecolor = blue, 
+  anchorcolor = blue
+}
+
+%   CUSTOM STYLES  %
+\thispagestyle{empty} % remove page number
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+%   MACROS  %
+\newcommand{\sectionStart}{
+  \begin{itemize}[label={},leftmargin=0in]
+}
+
+\newcommand{\sectionEnd}{
+  \end{itemize}
+}
+
+\newcommand{\head}[9]{
+  \noindent
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \centerline{
+      \textbf{\href{#1}{\color{black}{\LARGE {\underline{#2}}}}}
+    }
+    \vspace{5pt}\\
+    \centerline{
+      \href{mailto:#3}{\underline{#3}} $\mid$
+      #4 $\mid$
+      Github: \href{#5}{\underline{#6}} $\mid$
+      LinkedIn: \href{#7}{\underline{#8}}
+    }
+  \end{tabular*}
+  \vspace{-10pt}
+}
+
+\newcommand{\summaryText}[1]{
+  \item
+  \begin{addmargin}[7pt]{0pt}
+    {#1}
+  \end{addmargin}
+}
+
+\newcommand{\educationItem}[7]{
+  \vspace{2pt}
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    {\textbf{#1}, {#2}}  & {#3}\\
+    \hspace*{0.5mm}
+    {#4 in #5}
+    \vspace{0.5pt}
+  \end{tabular*}
+  % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{}}
+  %   \multicolumn{1}{p{500pt}}{\small{\textit{Relevant Coursework:} \textit{#7}}}
+  % \end{tabular*}
+  \vspace{-5pt}
+}
+
+\newcommand{\skillItem}[2]{
+  \vspace{-1pt}
+  \item
+    \textbf{#1}: #2
+  % \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}l@{}}
+  % \end{tabular*}
+  \vspace{-5pt}
+}
+
+\newcommand{\jobHeading}[3]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{\textbf{#1}} & #2 \\
+    \textit{\small#3} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectHeading}[4]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{{\href{#1}{#2}} \textbf{#3}} & #4 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\listStart}{\begin{itemize}}
+\newcommand{\listEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\bulletItem}[1]{
+  \item
+  \small{
+    {#1 \vspace{-1.8pt}}
+  }
+}
